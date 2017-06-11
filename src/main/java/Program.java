@@ -6,5 +6,7 @@ public class Program {
         System.out.println(osname);
         System.out.print("Arch: ");
         System.out.println(arch);
+
+        System.out.println(RuntimeDetector.getLibraryResource("ntcore"));
     }
 }
