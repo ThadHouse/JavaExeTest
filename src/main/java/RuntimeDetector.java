@@ -15,7 +15,9 @@ public class RuntimeDetector {
 
 
     boolean intel32 = is32BitIntel();
+    System.out.println("32 " + intel32);
     boolean intel64 = is64BitIntel();
+    System.out.println("64 " + intel64);
 
     if (isWindows()) {
       filePrefix = "";
@@ -131,10 +133,5 @@ public class RuntimeDetector {
   public static boolean is64BitIntel() {
     String arch = System.getProperty("os.arch");
     return arch == "amd64" || arch == "x86_64";
-  }
-
-  public static boolean isGenericArm() {
-    String arch = System.getProperty("os.arch");
-    return arch.contains("arm");
   }
 }
